@@ -41,21 +41,29 @@ h3 {
 }
 
 .vacancy-header {
+    background-color: #566163;
+    background-image: url(../img/bg_custom_web.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vacancy-header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     margin-bottom: 35px;
+}
 
-    text-shadow: 1px 1px 1px #000;
-
-    background-color: #566163;
-    background-image: url(../img/bg_custom_web.jpg);
-    background-position: center center;
+.header-logo img {
+    width: 270px;
+    height: 90px;
 }
 
 .header-title {
     margin: 20px 0 35px;
+    width: 280px;
 
     font-family: Montserrat, arial, sans-serif;
     font-size: 30px;
@@ -63,6 +71,7 @@ h3 {
     line-height: 30px;
     color: #fdf6f2;
     text-align: center;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .vacancy-title,
@@ -85,8 +94,18 @@ h3 {
     background-color: #fdf0e8;
 }
 
+.requirements-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
 .main-requirements,
 .additional-requirements {
+    width: 280px;
+}
+
+.main-requirements {
     margin-bottom: 35px;
 }
 
@@ -119,18 +138,20 @@ h3 {
     background-position: 0 0;
 }
 
-.company-details-wrapper {
-    padding: 35px 0;
-    margin-bottom: 35px;
-
-    color: #fdf6f2;
-    text-align: center;
-
+.company-details {
     background-color: #fda253;
     background-image: url(../img/bg_pse.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
+}
+
+.company-details .container {
+    padding: 35px 0;
+    margin-bottom: 35px;
+
+    color: #fdf6f2;
+    text-align: center;
 }
 
 .company-details-title {
@@ -198,6 +219,10 @@ h3 {
     background-image: url(../img/network.svg);
 }
 
+.company-benefits {
+    margin-bottom: 35px;
+}
+
 .company-benefits-list {
     margin: 0;
     padding: 0;
@@ -209,13 +234,131 @@ h3 {
     position: relative;
 
     padding-bottom: 10px;
+    padding-left: 25px;
     margin-bottom: 20px;
 
     border-bottom: 1px dotted rgba(0,0,0,0.2);
 }
 
+.company-benefits-list li::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../img/smiling-emoticon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.vacancy-footer {
+    padding: 35px 0;
+
+    background-color: #566163;
+    background-image: url(../img/bg_custom_web.jpg);
+    background-position: center center;
+}
+
+.footer-link {
+    font-size: 20px;
+    color: #fda253;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.social-button {
+    width: 30px;
+    height: 30px;
+
+    background-color: red;
+}
+
 @media (min-width: 768px) {
     .container {
         width: 708px;
+    }
+
+    .vacancy-header .container {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .header-logo img {
+        margin-left: -50px;
+
+        width: 300px;
+        height: 100px;
+    }
+
+    .header-title {
+        width: 340px;
+
+        text-align: right;
+        font-size: 37px;
+        line-height: 40px;
+    }
+
+    .requirements-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .requirements-wrapper {
+        border: 1px solid #b4b4b4;
+        background-color: #ffffff;
+    }
+
+    .main-requirements,
+    .additional-requirements {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .main-requirements {
+        margin-bottom: 0;
+    }
+
+    .company-promo {
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .company-promo li {
+        width: 300px;
+        margin-bottom: 35px;
+
+        font-size: 18px;
+    }
+
+    .company-promo li:last-child {
+        margin-bottom: 35px;
+    }
+
+    .company-promo li::before {
+        left: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1100px;
     }
 }
