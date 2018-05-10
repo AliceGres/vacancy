@@ -1,14 +1,221 @@
 body {
+    margin: 0;
+    padding: 0;
+
     font-family: PT Sans, arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+
+    background-color: #fdf6f2;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.vacancy-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 35px;
+
+    text-shadow: 1px 1px 1px #000;
+
+    background-color: #566163;
+    background-image: url(../img/bg_custom_web.jpg);
+    background-position: center center;
 }
 
 .header-title {
+    margin: 20px 0 35px;
+
     font-family: Montserrat, arial, sans-serif;
-    font-size: 62px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #fdf6f2;
+    text-align: center;
+}
+
+.vacancy-title,
+.company-benefits h3 {
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 68px;
+    line-height: 30px;
+}
+
+.vacancy-description {
+    margin-bottom: 35px;
+    padding: 15px;
+
+    border: 1px solid #FE9961;
+    background-color: #fdf0e8;
+}
+
+.main-requirements,
+.additional-requirements {
+    margin-bottom: 35px;
+}
+
+.main-requirements-list,
+.additional-requirements-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-requirements-list li,
+.additional-requirements li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.main-requirements-list li::before,
+.additional-requirements-list li::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 14px;
+    height: 16px;
+
+    background-image: url(../img/check-mark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.company-details-wrapper {
+    padding: 35px 0;
+    margin-bottom: 35px;
+
+    color: #fdf6f2;
+    text-align: center;
+
+    background-color: #fda253;
+    background-image: url(../img/bg_pse.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+}
+
+.company-details-title {
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.company-promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.company-promo li {
+    position: relative;
+
+    padding: 15px;
+    padding-top: 90px;
+    margin-bottom: 20px;
+    width: 246px;
+
+    border: 1px solid #fdf6f2;
+}
+
+.company-promo li:last-child {
+    margin-bottom: 0;
+}
+
+.company-promo li::before {
+    content: '';
+
+    position: absolute;
+    top: 10px;
+    left: 103px;
+    width: 70px;
+    height: 70px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.company-promo li.objective::before {
+    background-image: url(../img/objective.svg);
+}
+
+.company-promo li.world-map::before {
+    background-image: url(../img/world-map.svg);
+}
+
+.company-promo li.computer::before {
+    background-image: url(../img/computer.svg);
+}
+
+.company-promo li.network::before {
+    background-image: url(../img/network.svg);
+}
+
+.company-benefits-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.company-benefits-list li {
+    position: relative;
+
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 708px;
+    }
 }
